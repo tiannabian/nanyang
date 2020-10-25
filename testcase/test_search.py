@@ -8,12 +8,12 @@ from page.index_manage import IndexManage
 class TestSearch:
 
     def setup(self):
-        self.index_main = IndexMain
+        self.index_main = IndexMain()
 
     def test_search(self):
         """
         测试搜索
         :return:
         """
-        self.index_main.goto_manage(self)
-        IndexManage().goto_serach()
+        #print("123")
+        self.index_main.goto_manage().goto_serach()

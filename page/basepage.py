@@ -12,7 +12,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class BasePage:
     _driver = None
-    _base_url = "https://idocpreprod.yonyoucloud.com/"
+    _base_url = ""
     def __init__(self, driver:WebDriver = None):
         if driver is None:
             options = Options()
@@ -20,11 +20,11 @@ class BasePage:
             # 浏览器要使用--remote-debugging-port=9222
             options.debugger_address = "127.0.0.1:9222"
             self._driver = webdriver.Chrome(options=options)
-            self._driver.implicitly_wait(3)
+            self._driver.implicitly_wait(5)
         else:
             self._driver = driver
 
-        if self._base_url !="":
+        if self._base_url != "":
             self._driver.get(self._base_url)
 
     def find(self, by, locator):
@@ -40,3 +40,6 @@ class BasePage:
     def wait_for_condition(self, condition):
         #满足条件的显示等待
         WebDriverWait(self._driver, 10).until(condition)
+
+    def test_search(self):
+        pass
