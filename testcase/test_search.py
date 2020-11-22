@@ -16,4 +16,4 @@ class TestSearch:
         :return:
         """
         #print("123")
-        self.index_main.goto_manage().goto_serach()
+        self.index_main.goto_manage().goto_search()

@@ -10,7 +10,7 @@ from page.index_manage import IndexManage
 
 class IndexMain(BasePage):
     """首页PO"""
-    _base_url = "https://idocpreprod.yonyoucloud.com/"
+    _base_url = "https://idoc.yonyoucloud.com/"
 
     def goto_manage(self):
         """

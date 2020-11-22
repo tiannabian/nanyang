@@ -9,8 +9,8 @@ from page.basepage import BasePage
 
 class IndexManage(BasePage):
     """档案管理PO"""
-    _base_url = "https://idocpreprod.yonyoucloud.com/Archives"
-    def goto_serach(self):
+    _base_url = "https://idoc.yonyoucloud.com/Archives"
+    def goto_search(self):
         """
         搜索
         :return:
