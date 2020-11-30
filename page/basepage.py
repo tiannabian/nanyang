@@ -28,6 +28,7 @@ class BasePage:
             self._driver.get(self._base_url)
 
     def find(self, by, locator):
+        #find方法封装driver避免书写过程中driver写错或者丢失
         return self._driver.find_element(by, locator)
 
     def finds(self, by, locator):
